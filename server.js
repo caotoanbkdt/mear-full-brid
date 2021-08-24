@@ -5,6 +5,7 @@ const connectDb = require('./config/db');
 const rootRouter = require('./routes/api');
 connectDb();
 
+app.use(express.json()); // for parsing application/json
 app.use('/', rootRouter);
 
 app.listen(port, () => {

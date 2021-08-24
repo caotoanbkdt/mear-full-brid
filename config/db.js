@@ -6,6 +6,7 @@ module.exports = async () => {
     mongoose.connect(config.get('MONGO_URI'), {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     });
     console.log('connect success');
   } catch (error) {
