@@ -6,7 +6,7 @@ const rootRouter = require('./routes/api');
 connectDb();
 
 app.use(express.json()); // for parsing application/json
-app.use('/', rootRouter);
+app.use('/api', rootRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
